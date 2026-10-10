@@ -3,7 +3,15 @@
 # thsi function is not allowed len
 # print the string in reverse order
 
-greet = "My name is Krunal"
+'''greet = "My name is Krunal"
 for i in greet:
     print(greet[-1],end="")
-    greet = greet[:-1]
+    greet = greet[:-1]'''
+
+
+name = "Krunal"
+rev = ""
+
+for i in name:
+    rev = i + rev
+print(rev)
