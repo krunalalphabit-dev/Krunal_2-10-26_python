@@ -1,11 +1,19 @@
-a = int(input("Enter your number: "))
+n = int(input("enter your number= "))
 
-if a > 1:
-    for i in range(2, int(a**0.5) + 1):
-        if a % i == 0:
-            print("NOT PRIME")
-            break
-    else:
-        print(f"{a} is PRIME number")
+if n < 2:
+    print("not prime")
+elif n == 2:
+    print(f"{n} is prime number")
+elif n % 2 == 0:
+    print("not prime")
 else:
-    print("NOT PRIME")
+    is_prime = True
+    for i in range(3, int(n ** 0.5) + 1, 2):
+        if n % i == 0:
+            is_prime = False
+            break
+
+    if is_prime:
+        print(f"{n} is prime number")
+    else:
+        print("not prime")
