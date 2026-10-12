@@ -15,3 +15,4 @@ for i in range(n):
     item = input("Enter items  name: ")
     name.append(item)
 print(name) 
+
