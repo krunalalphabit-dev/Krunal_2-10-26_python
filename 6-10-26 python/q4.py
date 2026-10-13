@@ -1,8 +1,10 @@
-# user input for starting amount and menu-driven program for billing system and user in  add in item in the list and show total bill and total items to bill used in append function this code in used in some chegis then print in selected it itemes name 
+# user input for starting amount and menu-driven program for billing system and user in  add in item in the list and show total bill and total items to bill used in append function this code in used in some chegis then print in selected it itemes name  last user  select 6 option bill in list and total items to bill and total bill print in the last user select 6 option
 
 total = int(input("Enter starting amount: "))
 total_items = 0
-items_name = []  # List to store the names of items added to the bill
+items_name = []
+
+
 
 while True:
     print("=" * 20)
@@ -20,25 +22,25 @@ while True:
     if choice == 1:
         total += 100
         total_items += 1
-        items_name.append("Pasta")
+        items_name.append(("Pasta", 100))
         print("Pasta added successfully!")
 
     elif choice == 2:
         total += 200
         total_items += 1
-        items_name.append("Pizza")
+        items_name.append(("Pizza", 200))
         print("Pizza added successfully!")
 
     elif choice == 3:
         total += 80
         total_items += 1
-        items_name.append("Brownie")
+        items_name.append(("Brownie", 80))
         print("Brownie added successfully!")
 
     elif choice == 4:
         total += 60
         total_items += 1
-        items_name.append("Dosa")
+        items_name.append(("Dosa", 60))
         print("Dosa added successfully!")
 
     elif choice == 5:
@@ -47,7 +49,8 @@ while True:
         print("Total items to bill:", total_items)
         print("Items in the bill:")
         for item in items_name:
-            print("-", item)
+            print("-", item[0], "- Rs.", item[1])
+
     elif choice == 7:
         print("Thank you for visiting!")
         break
