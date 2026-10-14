@@ -2,6 +2,7 @@
 
 # Billing System using Dictionary, Tuple and List
 
+total = int(input("Enter starting amount: "))
 items_name = []
 total = 0
 final_bill = []
