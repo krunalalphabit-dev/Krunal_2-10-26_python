@@ -3,8 +3,7 @@
 total = int(input("Enter starting amount: "))
 total_items = 0
 items_name = []
-
-
+final_bill = []
 
 while True:
     print("=" * 20)
@@ -45,11 +44,20 @@ while True:
 
     elif choice == 5:
         print("Your total bill is:", total)
+
     elif choice == 6:
+        final_bill.append(items_name.copy())
+        final_bill.append(("Total Items", total_items))
+        final_bill.append(("Total Bill", total))
+
+        print("Final Bill Stored in List:", final_bill)
         print("Total items to bill:", total_items)
         print("Items in the bill:")
+
         for item in items_name:
             print("-", item[0], "- Rs.", item[1])
+
+        print("Total Bill:", total)
 
     elif choice == 7:
         print("Thank you for visiting!")
@@ -57,4 +65,3 @@ while True:
 
     else:
         print("Invalid choice!")
-
