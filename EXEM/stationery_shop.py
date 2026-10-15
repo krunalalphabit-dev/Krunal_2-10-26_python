@@ -33,7 +33,8 @@ while True:
             print("Order is empty. Add an item first.")
         else:
             break
-
+    
+              
     elif item_id < 1 or item_id > len(items):
         print("Wrong item ID.")
 
@@ -57,6 +58,7 @@ while True:
             print("Subtotal so far: Rs.", subtotal)
 
 print("Subtotal: Rs.", subtotal)
+print("===========================") 
 
 payment = input("Pay by cash or online? ").lower()
 
